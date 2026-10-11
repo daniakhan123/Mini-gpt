@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: minigpt-api
+    runtime: docker
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: CHECKPOINT_URL
+        sync: false   # paste a direct-download link to checkpoints/tiny_gpt.pt

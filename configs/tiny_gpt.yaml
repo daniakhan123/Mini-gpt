@@ -1,0 +1,26 @@
+# Baseline MiniGPT configuration (Tiny Shakespeare, character-level)
+run_name: tiny_gpt
+data_path: data/tiny_shakespeare.txt
+context_length: 128
+d_model: 128
+n_heads: 4
+n_layers: 4
+ffn_mult: 4          # ffn_dim = ffn_mult * d_model
+dropout: 0.1
+pos_encoding: sinusoidal   # sinusoidal | learned
+tie_weights: false
+batch_size: 64
+lr: 0.0003
+min_lr: 0.00003
+weight_decay: 0.1
+max_steps: 5000
+warmup_steps: 200
+eval_interval: 250
+eval_iters: 50
+grad_clip: 1.0
+val_frac: 0.1
+seed: 1337
+device: auto
+temperature: 0.8
+sample_prompt: "ROMEO:"
+sample_tokens: 200
