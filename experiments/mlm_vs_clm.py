@@ -33,7 +33,8 @@ def main():
     print("Causal (GPT) mask - position i sees j <= i:\n", causal_mask(T).int())
 
     base = load_config(a.config, {"max_steps": a.steps, "eval_interval": max(50, a.steps // 6), "n_layers": 2, "d_model": 64,
-                                  "context_length": 64, "batch_size": 32, "sample_tokens": 0})
+                                     "context_length": 64, "batch_size": 32, "sample_tokens": 0,
+                                        "lr": 2e-3, "min_lr": 2e-4, "warmup_steps": 50})
     text = Path(a.data).read_text() if a.data else (Path(base.data_path).read_text() if Path(base.data_path).exists() else DEMO_TEXT)
     res = {}
     for name, causal in [("causal_gpt", True), ("bidirectional_leaky", False)]:
