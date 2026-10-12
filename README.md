@@ -30,7 +30,7 @@ python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Acceptance checks (handout §16)
+## Acceptance checks
 
 ```bash
 pytest -q                                              # unit tests incl. causal-correctness + tiny overfit
@@ -39,7 +39,7 @@ python -m src.train --config configs/tiny_gpt.yaml     # full training -> checkp
 python -m src.generate --prompt "ROMEO:" --max-new-tokens 200 --temperature 0.8   # reload + generate
 ```
 
-## Evidence figures (handout §12)
+## Evidence figures 
 
 ```bash
 python -m experiments.hand_calculation        # Fig 1 (hand-calc attention) + Fig 2 (causal mask)
