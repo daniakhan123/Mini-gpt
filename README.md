@@ -7,6 +7,7 @@ No pretrained weights and no `transformers` library are used.
 * **Dataset:** [Tiny Shakespeare](https://huggingface.co/datasets/karpathy/tiny_shakespeare) (~1.1 MB, ~40k lines),
   downloaded automatically from the char-rnn mirror to `data/tiny_shakespeare.txt`.
 * **Tokenizer:** character-level, `<pad>`=0, `<unk>`=1, then sorted unique characters (vocab ≈ 67).
+* **Report:** [Building a Small GPT From Scratch: A Transformer Deep Dive](https://medium.com/@k230013/building-a-small-gpt-from-scratch-a-transformer-deep-dive-09fe061f0228?sharedUserId=k230013)
 
 ## Where things live
 
